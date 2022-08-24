@@ -20,6 +20,7 @@ def calculate_attempts():
       wrong_answer = True
 
 def making_guess(attempts):
+  """Asking user of guessed number, checking whether it's a correct datatype"""
   print(f"You have {attempts} remaining to guess the number")
   guess = input("Make a guess: ")
   try: 
@@ -30,6 +31,7 @@ def making_guess(attempts):
   
   
 def comparison(number):
+  """Counting attempts and informing user if guess is correct"""
   attempts = calculate_attempts()
   while attempts > 0:
     guess = making_guess(attempts)
@@ -56,6 +58,7 @@ def comparison(number):
   
   
 def game():
+  """Number Guessing Game"""
   print(logo)
   print("Welcome to the Number Guessing Game!")
   print("I'm thinking of a number between 1 and 100")
